@@ -31,9 +31,6 @@ const menu = [
             {
                 id: 41, title: '自制日历', url: '/calendar'
             },
-            {
-                id: 42, title: '日历组件', url: '/viewCalender'
-            }
         ]
     },
     { id: 5, icon: FileOutlined, title: 'demo', url: '' }

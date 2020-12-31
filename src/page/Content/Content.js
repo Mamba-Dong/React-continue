@@ -6,7 +6,6 @@ import SimulateQuery from "../SimulateQuery/SimulateQuery";
 import Daily from "../ArrayOperate/Daily";
 import Complex from "../ArrayOperate/Complex";
 import Calendar from "../Calendar/Calendar";
-import ViewCalender from "../Calendar/Component/ViewCalender";
 
 function Content(props) {
     return (
@@ -17,7 +16,6 @@ function Content(props) {
                 <Route exact path="/daily" component={Daily} />
                 <Route exact path="/complex" component={Complex} />
                 <Route exact path="/calendar" component={Calendar} />
-                <Route exact path="/viewCalender" component={ViewCalender} />
             </Switch>
         </Layout>
     );
