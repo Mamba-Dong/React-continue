@@ -1,0 +1,65 @@
+.demo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("../../../src/assets/images/suipian.gif");
+  .content {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-300px);
+    margin: 0 auto;
+  }
+  > div {
+    width: 100%;
+  }
+  .txtStyle {
+    margin-top: 20px;
+    margin-left: 110px;
+    font-size: 17px;
+  }
+  .list {
+    height: 600px;
+    position: relative;
+    margin-top: 20px;
+    overflow-y: auto;
+  }
+  .thumb {
+    width: 2px;
+    position: absolute;
+    top: 226px;
+    left: 1px;
+    background-color: #EDEDED;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    transition: all 1s linear;
+  }
+  .list_title {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 130px;
+  }
+
+  .list::-webkit-scrollbar {   /*滚动条整体样式*/
+    width: 2px;                  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  .list::-webkit-scrollbar-thumb {   /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+  }
+  .list::-webkit-scrollbar-track {   /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+  }
+}
+
+.blur {
+  background-color: #000;
+  color: #fff;
+}
+.focus {
+  background-color: #fff;
+  color: #000;
+}

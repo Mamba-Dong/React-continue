@@ -1,0 +1,18 @@
+.calendar-list {
+  flex: 1;
+  overflow: auto;
+  text-align: left;
+  color: rgba(0,0,0,.85);
+  &-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+  .x-tooltip {
+    max-width: 500px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
