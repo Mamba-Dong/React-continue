@@ -1,4 +1,4 @@
-# react_test
+# react_continue
 
 实现1： 学习如何创建一个新的react项目。
 
