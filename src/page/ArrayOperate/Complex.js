@@ -15,13 +15,11 @@ function Complex() {
         })
     },[])
 
-    console.log(newArr)
-
     return (
         <div>
             {
                 _.map(newArr, item => {
-                    return <div>{item.name}</div>
+                    return <div key={item.id}>{item.name}</div>
                 })
             }
         </div>

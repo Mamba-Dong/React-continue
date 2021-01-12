@@ -6,7 +6,7 @@
   .wuKong {
     position: absolute;
     top: 160px;
-    left: 450px;
+    left: 25%;
     animation: wuKong 4s infinite ease-in-out;
     .wuKong-img {
       width: 150px;
@@ -56,7 +56,7 @@
     height: 180px;
     position: absolute;
     top: 372px;
-    left: 795px;
+    left: 46%;
     background: url("../../assets/images/o_bajie.png") 0 0 no-repeat;
     animation: baJie 1s steps(8) infinite
   }
@@ -70,7 +70,7 @@
     height: 240px;
     position: absolute;
     top: 340px;
-    left: 960px;
+    left: 56%;
     background: url("../../assets/images/o_tangseng.png") 0 0 no-repeat;
     animation: tangSeng 1s steps(8) infinite
   }
@@ -84,7 +84,7 @@
     height: 200px;
     position: absolute;
     top: 372px;
-    left: 1125px;
+    left: 66%;
     background: url("../../assets/images/o_shaseng.png") 0 0 no-repeat;
     animation: shaSeng 1s steps(8) infinite
   }

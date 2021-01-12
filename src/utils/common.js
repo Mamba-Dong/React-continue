@@ -1,4 +1,4 @@
-// 判断值是否为undefined、null、‘’
+// 判断值是否为undefined、null、''
 export function unUsable(props) {
     if(props === 'undefined' || props === null || props === '') return true
 }

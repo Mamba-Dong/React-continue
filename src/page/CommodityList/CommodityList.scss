@@ -1,0 +1,92 @@
+.commodity-list {
+  .main {
+    width: 390px;
+    margin: 50px auto;
+    padding: 15px 10px 50px 10px;
+    background-color: #fff;
+    .shoe {
+      &-img {
+        width: 100px;
+        height: 110px;
+        display: inline-block;
+        >img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-title {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+        font-size: 13px;
+        font-family: 微软雅黑;
+        &-price {
+          margin-top: 10px;
+          &-normal {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ea5418;
+          }
+          &-discounts {
+            vertical-align: text-bottom;
+            margin-left: 5px;
+            padding: 3px 5px;
+            font-size: 12px;
+            color: #ffffff;
+            background-color: #ea5418;
+            border-radius: 10px;
+          }
+        }
+        &-coins {
+          margin-top: 3px;
+          color: #ea5418;
+        }
+        &-inventory {
+          margin-top: 5px;
+          color: #afafaf;
+        }
+        &-choose {
+          margin-top: 5px;
+        }
+      }
+    }
+    .footer {
+      margin-top: 20px;
+      .options {
+        padding: 10px 0;
+        border-top: 1px solid #afafaf;
+        &-color {
+          font-weight: bold;
+        }
+        &-size {
+          display: flex;
+          flex-wrap: wrap;
+          &-item {
+            margin-top: 12px;
+            margin-left: 12px;
+            padding: 5px 15px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            background-color: #f5f5f5;
+          }
+          &-normal {
+            color: #535353;
+            text-decoration: none
+          }
+          &-disabled {
+            color: #afafaf;
+            text-decoration: line-through
+          }
+          &-normal:hover {
+            cursor: pointer;
+          }
+          &-clickItem {
+            color: #ea5418;
+            background-color: #ffffff;
+            border: 1px solid #ea5418;
+          }
+        }
+      }
+    }
+  }
+}

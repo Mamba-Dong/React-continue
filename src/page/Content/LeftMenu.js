@@ -33,7 +33,7 @@ const menu = [
             },
         ]
     },
-    { id: 5, icon: FileOutlined, title: 'demo', url: '' }
+    { id: 5, icon: FileOutlined, title: '商品选择', url: '/commodityList' }
 ]
 
 function LeftMenu() {
