@@ -5,12 +5,12 @@ let index = 0
 export const filterName = function(data) {
     let color, size
 
-    color = colorName(index, data.variations)
+    color = colorName(data.variations)
 
     if(!colorSizeArr(color, data.products)) {
         index++
         filterName(data)
-        color = colorName(index, data.variations)
+        color = colorName(data.variations)
     }
 
     size = _.filter(colorSizeArr(color, data.products), v => v.name === '尺码')[0].value
@@ -28,7 +28,7 @@ function colorSizeArr(color, products) {
     }
 }
 
-function colorName(index, variations) {
+function colorName(variations) {
     for(let i = 0; i < variations.length; i++) {
         if(variations[i].name === '颜色') {
             return variations[i].values[index].name

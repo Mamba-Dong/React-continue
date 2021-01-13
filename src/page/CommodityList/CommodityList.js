@@ -70,24 +70,18 @@ function CommodityList() {
         if(_.isNil(variations)) return
 
         _.forEach(variations, list => {
+            if(list.name === '颜色') {
+                setColor(filterName(data).color)
+            } else {
+                setSize(filterName(data).size)
+            }
+
             _.forEach(list.values, item => {
                 item.disabled = false
             })
         })
 
         setVariations(variations)
-    }, [variations])
-
-    // 初始选中的颜色和尺码
-    useEffect(() => {
-        if(_.isNil(variations)) return
-        _.forEach(variations, list => {
-            if(list.name === '颜色') {
-                setColor(filterName(data).color)
-            } else {
-                setSize(filterName(data).size)
-            }
-        })
     }, [variations])
 
     // 初始展示的颜色、尺码列表
@@ -222,4 +216,3 @@ function CommodityList() {
 }
 
 export default CommodityList
-
