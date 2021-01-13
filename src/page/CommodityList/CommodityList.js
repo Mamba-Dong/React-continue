@@ -32,14 +32,14 @@ const imgList = [
     {
         name: "SK真皮574蓝巨人",
         img: LJR
-    },{
+    }, {
         name: "SK真皮574灰白",
         img: HB
     },
     {
         name: "SK真皮574炭灰白",
         img: THB
-    },{
+    }, {
         name: "限量版574贝壳粉",
         img: BKF
     },
@@ -82,7 +82,7 @@ function CommodityList() {
         })
 
         setVariations(variations)
-    }, [variations])
+    }, [ variations ])
 
     // 初始展示的颜色、尺码列表
     useEffect(() => {
@@ -92,16 +92,20 @@ function CommodityList() {
             _.forEach(list.variationMappings, item => {
                 if(item.value === filterName(data).size) {
                     const size = _.filter(list.variationMappings, i => i.name === '颜色')
-                    _.forEach(size, v => { arr.push(v.value) })
+                    _.forEach(size, v => {
+                        arr.push(v.value)
+                    })
                 }
                 if(item.value === filterName(data).color) {
                     const color = _.filter(list.variationMappings, i => i.name === '尺码')
-                    _.forEach(color, v => { variationList.push(v.value) })
+                    _.forEach(color, v => {
+                        variationList.push(v.value)
+                    })
                 }
             })
         })
 
-        setChooseList([...arr, ...variationList])
+        setChooseList([ ...arr, ...variationList ])
     }, [])
 
     // 展示商品的价格、库存
@@ -120,7 +124,7 @@ function CommodityList() {
         })
 
         return arr
-    }, [color, size])
+    }, [ color, size ])
 
     // 通过选择颜色和尺码切换哪些可选
     const optionList = useMemo(() => {
@@ -131,7 +135,7 @@ function CommodityList() {
                 })
             }
         })
-    }, [name, variations, chooseList])
+    }, [ name, variations, chooseList ])
 
     // 选择不同的商品展示对应的图片
     const initImg = useMemo(() => {
@@ -139,7 +143,7 @@ function CommodityList() {
         const imgArr = _.filter(imgList, item => item.name === color)[0]
 
         return { img: imgArr.img, name: imgArr.name }
-    }, [color])
+    }, [ color ])
 
     return (
         <div className="commodity-list">
@@ -150,7 +154,8 @@ function CommodityList() {
                     </div>
                     <div className="shoe-title">
                         <div className="shoe-title-price">
-                            <span className="shoe-title-price-normal"><span style={{ fontSize: 12 }}>￥</span>{goods.price}</span>
+                            <span className="shoe-title-price-normal"><span
+                                style={{ fontSize: 12 }}>￥</span>{goods.price}</span>
                             <span className="shoe-title-price-discounts">券后￥{goods.price - 10}.00</span>
                         </div>
                         <div className="shoe-title-coins">淘金币可抵6.24元</div>
@@ -172,8 +177,9 @@ function CommodityList() {
                                                 return (
                                                     <Fragment key={index}>
                                                         {
-                                                            <div className={`options-size-item ${item.disabled ? 'options-size-disabled' : 'options-size-normal'} ${(color === item.name || size === item.name) && 'options-size-clickItem'}`}
-                                                                 onClick={() => !item.disabled && handleColorSizeClick(list.name, item.name)}>
+                                                            <div
+                                                                className={`options-size-item ${item.disabled ? 'options-size-disabled' : 'options-size-normal'} ${(color === item.name || size === item.name) && 'options-size-clickItem'}`}
+                                                                onClick={() => !item.disabled && handleColorSizeClick(list.name, item.name)}>
                                                                 { item.name }
                                                             </div>
                                                         }
@@ -191,20 +197,20 @@ function CommodityList() {
         </div>
     )
 
-    //已选商品加“”后显示
+    // 已选商品加“”后显示
     function goodsString(value) {
         if(_.isNil(value)) return ''
         return `"${value}"`
     }
 
-    //选择颜色和尺码
+    // 选择颜色和尺码
     function handleColorSizeClick(type, typeData) {
         const arr = []
         _.forEach(data.products, list => {
             _.forEach(list.variationMappings, item => {
                 if(item.value === typeData) {
                     const size = _.filter(list.variationMappings, i => i.name === (type === '颜色' ? '尺码' : '颜色'))
-                    _.forEach(size, v => { arr.push(v.value)} )
+                    _.forEach(size, v => arr.push(v.value))
                 }
             })
         })
