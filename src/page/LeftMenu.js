@@ -8,7 +8,7 @@ const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const menu = [
-    { id: 1, icon: PieChartOutlined, title: '首页', url: '/' },
+    { id: 1, icon: PieChartOutlined, title: '首页', url: '/home' },
     { id: 2, icon: DesktopOutlined, title: '模糊搜索', url: '/simulateQuery' },
     {
         id: 3,

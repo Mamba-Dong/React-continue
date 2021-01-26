@@ -177,8 +177,7 @@ function CommodityList() {
                                                 return (
                                                     <Fragment key={index}>
                                                         {
-                                                            <div
-                                                                className={`options-size-item ${item.disabled ? 'options-size-disabled' : 'options-size-normal'} ${(color === item.name || size === item.name) && 'options-size-clickItem'}`}
+                                                            <div className={`options-size-item ${item.disabled ? 'options-size-disabled' : 'options-size-normal'} ${(color === item.name || size === item.name) && 'options-size-clickItem'}`}
                                                                 onClick={() => !item.disabled && handleColorSizeClick(list.name, item.name)}>
                                                                 { item.name }
                                                             </div>

@@ -1,0 +1,63 @@
+.login {
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/images/bg.gif");
+  .content {
+    width: 1200px;
+
+    height: 650px;
+    display: flex;
+    &-left {
+      flex: 1;
+      background: url("./assets/images/zgx.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    &-right {
+      width: 450px;
+      background-color: #282c34;
+      .title {
+        margin: 90px 0 110px 0;
+        text-align: center;
+        color: #fff;
+        opacity: 0.8;
+        font-size: 24px;
+        font-family: 楷体;
+      }
+      .ant-input {
+        color: #fff;
+        text-align: center;
+        background-color: transparent;
+      }
+      .ant-input-affix-wrapper {
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-bottom: 25px;
+        opacity: 0.8;
+        color: #fff;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        background-color: transparent;
+      }
+      .loginBtn {
+        width: 80%;
+        height: 40px;
+        margin-top: 25px;
+        margin-left: 10%;
+        padding-left: 50px;
+        opacity: 0.8;
+        color: #fff;
+        border: none;
+        text-align: center;
+        letter-spacing: 10px;
+        background-color: #535353;
+      }
+    }
+  }
+}
